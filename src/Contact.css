@@ -1,0 +1,8 @@
+.input-group{
+    width: 400px;
+}
+
+textarea {
+    resize: none;
+    min-height: 200px;
+}

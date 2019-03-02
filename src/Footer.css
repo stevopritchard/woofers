@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+}
+
+ul{
+    text-align: left;
+    font-size: 0.8em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
