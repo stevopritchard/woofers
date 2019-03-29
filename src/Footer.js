@@ -5,7 +5,7 @@ import './Footer.css'
 class Footer extends Component{
     render(){
         return(
-            <div className="container">
+            <div className="containerFooter">
                 <Row style={{width: "970px"}}>
                     <Col className="col" xs="4" sm="4" md="4" lg="4">
                     <h5 style={{textAlign: "center"}}>Open Hours</h5>

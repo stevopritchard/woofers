@@ -18,9 +18,9 @@ class App extends Component {
         <Menu />
         <Route path="/" exact component={MainArea}/>
         <Route path="/about" component={About}/>
-        <Route path="/service" component={Service}/>
-        <Route path="/gallery" component={Gallery}/>
-        <Route path="/contact" component={Contact}/>
+        {/* <Route path="/service" component={Service}/> */}
+        {/* <Route path="/gallery" component={Gallery}/> */}
+        {/* <Route path="/contact" component={Contact}/> */}
         <Footer />
       </div>
     );

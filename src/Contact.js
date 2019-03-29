@@ -5,7 +5,7 @@ import './Contact.css'
 class Contact extends Component {
         render(){
             return(
-                <div className="container" style={{backgroundColor: '#EFEFEF'}}>
+                <div className="containerContact" style={{backgroundColor: '#EFEFEF'}}>
                     <Row>
                         <Col className="col" xs="6" sm="6" md="9" lg="9">
                             <div className="input-group center">

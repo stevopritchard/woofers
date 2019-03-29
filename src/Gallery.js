@@ -5,7 +5,7 @@ import './Gallery.css';
 const Gallery = () => {
     let v = [1,2,3,4,5,6,7,8]
         return(
-            <div className="container" style={{backgroundColor: '#EFEFEF', height: 600}}>
+            <div className="containerGallery" style={{backgroundColor: '#EFEFEF', height: 600}}>
                 {
                     v.map((user,i) => {
                         return(

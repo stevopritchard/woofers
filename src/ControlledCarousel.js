@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
-import './ControlledCarousel.css'
 
   class ControlledCarousel extends Component {
     constructor(props, context) {
