@@ -16,12 +16,14 @@ class App extends Component {
     return (
       <div style={{height:"100vh"}}>
         <Menu />
-        <Route path="/" exact component={MainArea}/>
-        <Route path="/about" component={About}/>
-        {/* <Route path="/service" component={Service}/> */}
-        {/* <Route path="/gallery" component={Gallery}/> */}
-        {/* <Route path="/contact" component={Contact}/> */}
-        <Footer />
+        <div style={{paddingTop:"70px"}}>
+          <Route path="/" exact component={MainArea}/>
+          <Route path="/about" component={About}/>
+          <Route path="/service" component={Service}/>
+          <Route path="/gallery" component={Gallery}/>
+          <Route path="/contact" component={Contact}/>
+          <Footer />
+        </div>
       </div>
     );
   }

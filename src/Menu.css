@@ -1,13 +1,26 @@
+.navbar {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+
 .navbar, .navbar-nav, .navbar-header, .navbar-brand {
    background-color: white;
    color: #75a8a6;
    font-family: 'Chewy', cursive;
 }
-.navbar-header{
+
+.navbar .container{
+    display: flex;
     justify-content: space-between;
+}
+
+.navbar-header{
+    display: flex;
 }
 .navbar-brand{
     display: flex;
+    justify-content: left;
 }
 
 .navbar.navbar-default > .container > .navbar-header > a.navbar-brand {
@@ -16,4 +29,17 @@
 
 .navbar.navbar-default > .container > .navbar-header > a.navbar-brand > p{
     font-size: 1.2em;
+}
+
+.navbar-right {
+    font-size: 1.2em;
+    transition: all 20s;
+}
+
+.navbar-right li a:link, a:hover, a:visited, a:active {
+    color: #75a8a6;
+}
+
+.navbar-right li:hover {
+    transform: scale(2);
 }

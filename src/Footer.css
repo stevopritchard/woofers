@@ -1,6 +1,26 @@
-.containerFooter{
+#contFooter{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+#footerLogos {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#footerLogos {
+    display: flex;
+    flex-direction: row;
+}
+
+#footerLogos .col {
+    display: flex;
+    align-items: center;
+}
+
+#footerLogos .col img{
+    padding-right: 15px;
 }
 
 ul{
@@ -9,4 +29,9 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.fa-facebook-square, .fa-instagram {
+    color: #75a8a6;
+    padding: 0px 5px 0px 5px;
 }

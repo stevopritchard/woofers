@@ -1,6 +1,8 @@
-.containerGallery{
+#contGallery{
     display: flex;
     flex-flow: row wrap;
     align-content: space-around;
     justify-content: center;
+    background-color: #EFEFEF;
+    height: 600px;
 }

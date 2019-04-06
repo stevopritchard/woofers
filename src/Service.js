@@ -5,10 +5,10 @@ import './Service.css';
 class Service extends Component {
     render(){
         return (
-            <div className="container" style={{backgroundColor: '#EFEFEF'}}>
-                <div className="contService">
+            <div className="container">
+                <div id="contService">
                     <Row>
-                        <Col className="col" xs="12" sm="12" md="12" lg="12" style={{height: '500px'}}>
+                        <Col className="col" xs="12" sm="12" md="12" lg="12">
                             <h2>Service</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

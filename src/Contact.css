@@ -1,10 +1,31 @@
-.containerContact{
+#contContact{
     display: flex;
+    background-color: #EFEFEF;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+}
+
+#contContact .row {
+    display: flex; 
     justify-content: center;
+    align-items: stretch;
+    padding: 0px 30px 0px 30px;
+}
+
+#contContact .row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input-group{
     width: 400px;
+    z-index: 0;
+}
+
+#inputName{
+    padding-top: 20px;
 }
 
 textarea {
