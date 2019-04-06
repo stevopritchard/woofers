@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { Row, Col, InputGroup, FormControl } from 'react-bootstrap';
-import './Contact.css'
+import './Contact.css';
 
 class Contact extends Component {
-        render(){
-            return(
-                <div className="container" style={{backgroundColor: '#EFEFEF'}}>
+    render(){
+        return(
+            <div className="container">
+                <div id="contContact">
                     <Row>
-                        <Col className="col" xs="6" sm="6" md="9" lg="9">
+                        <h2>Contact </h2>
+                    </Row>
+                    <Row>
+                        <Col className="col" xs="12" sm="12" md="12" lg="12">
                             <div className="input-group center">
-                                <InputGroup size="sm" style={{paddingTop: 20}}>
+                                <InputGroup id="inputName" size="sm">
                                     <FormControl
                                         placeholder="Your Name"
                                         aria-label="Your Name"
@@ -40,8 +44,9 @@ class Contact extends Component {
                         </Col>
                     </Row>
                 </div>
-            )
-        }
+            </div>
+        )
+    }
 }
 
 export default Contact

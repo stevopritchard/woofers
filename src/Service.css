@@ -1,7 +1,29 @@
-.container{
+#contService{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    background-color: #EFEFEF;
+    height: 600px;
+}
+
+#contService p{
+    padding-top: 10px;
+}
+
+#contService .row .col img{
+    width: 200px;
+    height: 110px;
+}
+
+#contService .row{
+    display: flex;
     justify-content: center;
-    align-content: stretch
+    align-items: stretch;
+    padding: 0px 30px 30px 30px;
+}
+
+#contService .row .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
 }
