@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
-import image1 from "/Users/Stevo/GitHub/woofers/src/images/IMG-0260.JPG"
-import image2 from "/Users/Stevo/GitHub/woofers/src/images/IMG-0453.JPG"
-import image3 from "/Users/Stevo/GitHub/woofers/src/images/IMG-1810.JPG"
+import image1 from "./images/IMG-0260.JPG"
+import image2 from "./images/IMG-0453.JPG"
+import image3 from "./images/IMG-1810.JPG"
 
   class ControlledCarousel extends Component {
     constructor(props, context) {

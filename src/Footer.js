@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col,  } from 'react-bootstrap';
-import cityandguilds from '/Users/Stevo/GitHub/woofers/src/images/city&guildslogo.png'
-import firstaid from '/Users/Stevo/GitHub/woofers/src/images/firstaid.JPG'
+import cityandguilds from './images/city&guildslogo.png'
+import firstaid from './images/firstaid.JPG'
 import './Footer.css'
 
 class Footer extends Component{
