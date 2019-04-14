@@ -40,6 +40,10 @@
     color: #75a8a6;
 }
 
+.navbar-right li{
+    transition: all .5s;
+}
+
 .navbar-right li:hover {
-    transform: scale(2);
+    transform: scale(1.15);
 }

@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "file-system": "^2.2.2",
+    "google-maps-react": "^2.0.2",
+    "instafeed.js": "^1.4.1",
     "install": "^0.12.2",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",

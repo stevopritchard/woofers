@@ -10,7 +10,9 @@ const Gallery = () => {
                     {
                         v.map((user,i) => {
                             return(
-                                <img alt="placeholder" src="https://via.placeholder.com/200x240.png" style={{paddingLeft: 10}}/>
+                                <div>
+                                    <img alt="placeholder" src="https://via.placeholder.com/200x240.png" style={{paddingLeft: 10}}/>
+                                <div>
                             )
                         })
                     }

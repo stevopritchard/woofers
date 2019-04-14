@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col,  } from 'react-bootstrap';
 import cityandguilds from './images/city&guildslogo.png'
 import firstaid from './images/firstaid.JPG'
+import Map from './Map'
 import './Footer.css'
 
 class Footer extends Component{
@@ -43,7 +44,7 @@ class Footer extends Component{
                             </tr>
                         </tbody>
                         </Col>
-                        <Col className="col" xs="4" sm="4" md="4" lg="4">
+                        <Col className="col" xs="3" sm="3" md="3" lg="3">
                             <h5 style={{textAlign: "center"}}>Contact Details</h5>
                             <tr>
                                 <td>38 Mill Lane</td>
@@ -61,11 +62,10 @@ class Footer extends Component{
                             <tr>
                                 <td>(opposite the Mill Lane Methodist Church car park )</td>
                             </tr>
-                            <br/>
                             <p style={{fontWeight: "bold"}}>Please do not park on or block the drive as this is private access to the neighbouring houses. There is plenty of street parking available.  </p>
                         </Col>
-                        <Col className="col" xs="4" sm="4" md="4" lg="4">
-                            <h5 style={{textAlign: "center"}}>Social Media</h5>
+                        <Col className="col" xs="5" sm="5" md="5" lg="5">
+                            <Map/>
                         </Col>
                     </Row>
                     <Row id="footerLogos">
@@ -84,7 +84,6 @@ class Footer extends Component{
                     </Row>
                 </div>
             </div>
-            
         )
     }
 }
