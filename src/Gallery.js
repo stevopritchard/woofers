@@ -1,25 +1,35 @@
 import React from 'react';
-// import { Row, Col } from 'react-bootstrap';
 import './Gallery.css';
 
 const Gallery = () => {
-    let v = [1,2,3,4,5,6,7,8]
-        return(
-            <div className="container">
-                <div id="contGallery">
-                    {
-                        v.map((user,i) => {
-                            return(
-                                <div>
-                                    <img alt="placeholder" src="https://via.placeholder.com/200x240.png" style={{paddingLeft: 10}}/>
-                                <div>
-                            )
-                        })
-                    }
-                </div>
-
+    let imgArr = [];
+    const path = require('path');
+    const fs = require('fs');
+    const directoryPath = path.join(__dirname, 'Images'); //not sure what to do here!
+    fs.readdir(directoryPath, function (err, files) {
+        if (err) {
+            return console.log('Unable to scan directory: ' + err);
+        } 
+        files.forEach(function (file) {
+            imgArr.push(file);
+        });
+    });
+    return(
+        <div className="container">
+            <div id="contGallery">
+                {
+                    imgArr.map((user,i) => {
+                        return(
+                            <div>
+                                <img alt="placeholder" src={ imgArr[i] } style={{paddingLeft: 10}}/>
+                            </div>
+                        )
+                    })
+                }
             </div>
-        )
-}
+
+        </div>
+    )
+};
 
 export default Gallery;
