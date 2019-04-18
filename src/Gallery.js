@@ -5,7 +5,7 @@ const Gallery = () => {
     let imgArr = [];
     const path = require('path');
     const fs = require('fs');
-    const directoryPath = path.join('src', 'images'); //not sure what to do here!
+    const directoryPath = path.join('src', 'images'); //not sure if I'm referencing the filepath correctly!
     fs.readdir(directoryPath, function (err, files) {
         if (err) {
             return console.log('Unable to scan directory: ' + err);
