@@ -5,7 +5,7 @@ const Gallery = () => {
     let imgArr = [];
     const path = require('path');
     const fs = require('fs');
-    const directoryPath = path.join(__dirname, 'Images'); //not sure what to do here!
+    const directoryPath = path.join('src', 'images'); //not sure what to do here!
     fs.readdir(directoryPath, function (err, files) {
         if (err) {
             return console.log('Unable to scan directory: ' + err);
@@ -21,7 +21,7 @@ const Gallery = () => {
                     imgArr.map((user,i) => {
                         return(
                             <div>
-                                <img alt="placeholder" src={ imgArr[i] } style={{paddingLeft: 10}}/>
+                                <img alt="placeholder" src={i} style={{paddingLeft: 10}}/>
                             </div>
                         )
                     })
