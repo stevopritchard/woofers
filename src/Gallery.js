@@ -1,27 +1,23 @@
 import React from 'react';
 import './Gallery.css';
 
+
 const Gallery = () => {
+
     let imgArr = [];
-    const path = require('path');
-    const fs = require('fs');
-    const directoryPath = path.join('src', 'images'); //not sure if I'm referencing the filepath correctly!
-    fs.readdir(directoryPath, function (err, files) {
-        if (err) {
-            return console.log('Unable to scan directory: ' + err);
-        } 
-        files.forEach(function (file) {
-            imgArr.push(file);
-        });
+    const context = require.context('./images', true, /\.(JPG)$/);
+    context.keys().forEach((filename)=>{
+        imgArr.push ( context(filename) );
     });
+
     return(
         <div className="container">
             <div id="contGallery">
                 {
-                    imgArr.map((user,i) => {
+                    imgArr.map((img,i) => {
                         return(
                             <div>
-                                <img alt="placeholder" src={i} style={{paddingLeft: 10}}/>
+                                <img alt="placeholder" src={img} style={{paddingLeft: 10}}/>
                             </div>
                         )
                     })
