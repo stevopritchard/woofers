@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col,  } from 'react-bootstrap';
-import cityandguilds from './images/city&guildslogo.png'
-import firstaid from './images/firstaid.JPG'
+import cityandguilds from './images-footer/city&guildslogo.png'
+import firstaid from './images-footer/firstaid.JPG'
 import Map from './Map'
 import './Footer.css'
 

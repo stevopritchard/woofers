@@ -41,11 +41,6 @@ class Menu extends Component {
                             Contact
                         </Link>
                     </NavItem>
-                    <NavItem eventKey={5}>
-                        <Link to="/booknow">
-                            Book Now
-                        </Link>
-                    </NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

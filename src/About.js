@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import image1 from "./images-about/IMG-0458.JPG"
+import image2 from "./images-about/B3C77DC0-6896-42C1-9DF4-6529C47D6125.JPG"
 import './About.css'
 
 class About extends Component {
@@ -11,7 +13,7 @@ class About extends Component {
                         <h2>About</h2>
                     </Row>
                     <Row>
-                        <Col className="col" xs="6" sm="6" md="9" lg="9">
+                        <Col className="col" xs="12" sm="12" md="12" lg="12">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
@@ -20,9 +22,12 @@ class About extends Component {
                             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
                             culpa qui officia deserunt mollit anim id est laborum.</p>
                         </Col>
-                        <Col className="col" xs="6" sm="6" md="3" lg="3">
-                            <img alt="placeholder" src="https://via.placeholder.com/200x400.png"/>
-                        </Col>
+                    </Row>
+                    <Row>
+                        <img alt="Kelly" src={image1}/>
+                    </Row>
+                    <Row>
+                        <img alt="Doris & Edith" src={image2}/>
                     </Row>
                 </div>
             </div>

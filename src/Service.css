@@ -2,6 +2,8 @@
     display: flex;
     background-color: #EFEFEF;
     height: 600px;
+    overflow: scroll;
+    border-radius: 5px;
 }
 
 #contService p{
@@ -27,3 +29,11 @@
     align-items: center;
     height: 600px;
 }
+
+#contService .row .col p{
+   font-size: 15px; 
+}
+
+#contService .row .col ul li{
+    font-size: 15px; 
+ }
