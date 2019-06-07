@@ -7,8 +7,8 @@ import Footer from './Footer';
 import About from './About';
 import Service from './Service';
 import Gallery from './Gallery';
+import Terms from './Terms';
 import Contact from './Contact';
-
 import './App.css';
 
 class App extends Component {
@@ -22,6 +22,7 @@ class App extends Component {
           <Route path="/service" component={Service}/>
           <Route path="/gallery" component={Gallery}/>
           <Route path="/contact" component={Contact}/>
+          <Route path="/terms" component={Terms}/>
           <Footer />
         </div>
       </div>

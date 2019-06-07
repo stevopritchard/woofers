@@ -31,12 +31,3 @@ ul{
     padding: 0;
 }
 
-.fa-facebook-square, .fa-instagram {
-    color: #75a8a6;
-    padding: 0px 5px 0px 5px;
-    transition: all .5s;
-}
-
-.fa:hover {
-        transform: scale(1.35);
-}

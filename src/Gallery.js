@@ -11,7 +11,7 @@ const Gallery = () => {
         <div className="container">
             <div className="preScrollable" id="contGallery">
             
-                <ImageGallery></ImageGallery>
+                <ImageGallery/>
 
                 {/* <div id="myModal" class="modal">
                     <span class="close" onClick={onclick2}>&times;</span>

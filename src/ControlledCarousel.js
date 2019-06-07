@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Row } from 'react-bootstrap';
+import Testimonials from './Testimonials';
 import image1 from "./images-carousel/IMG-0463.jpg"
 import image2 from "./images-carousel/IMG-0453.JPG"
 import image3 from "./images-carousel/IMG-1810.JPG"
@@ -28,6 +29,7 @@ import image3 from "./images-carousel/IMG-1810.JPG"
       const { index, direction } = this.state;
   
       return (
+        <div>
         <Carousel
           activeIndex={index}
           direction={direction}
@@ -64,6 +66,11 @@ import image3 from "./images-carousel/IMG-1810.JPG"
             </div>
           </Carousel.Item>
         </Carousel>
+
+                    <Row style={{width: "970px", textAlign: "center", paddingTop: "11px"}}>
+                        <Testimonials />
+                    </Row>
+                    </div>
       );
     }
   }
