@@ -1,88 +1,98 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Lightbox from 'react-images';
+import React from "react";
+import PropTypes from "prop-types";
+import App from "./App";
+
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 class ImageGallery extends React.Component {
-    constructor(props){
-        super(props);  
+  constructor(props) {
+    super(props);
 
-        this.imgArr = [];
+    this.images = [];
+    const context = require.context("./images-gallery", true, /\.(JPG)$/);
+    context.keys().forEach(filename => {
+      this.images.push(context(filename));
+    });
 
-        const context = require.context('./images-gallery', true, /\.(JPG)$/);
-        
-        context.keys().forEach((filename)=>{
-        this.imgArr.push ( context(filename) );
-        });
+    this.state = {
+      index: 0,
+      isOpen: false
+    };
 
+    this.openLightbox = this.openLightbox.bind(this);
+    this.closeLightbox = this.closeLightbox.bind(this);
+    this.moveNext = this.moveNext.bind(this);
+    this.movePrev = this.movePrev.bind(this);
+  }
 
-        this.state = {
-			lightboxIsOpen: false,
-			currentImage: 0,
-        };
-        
-        this.isOpen = this.isOpen.bind(this);
-        this.onClickPrev = this.onClickPrev.bind(this);
-        this.onClickNext = this.onClickNext.bind(this);
-        this.onClose = this.onClose.bind(this);
-        
+  openLightbox(index) {
+    this.setState({ index: index, isOpen: true });
+  }
+
+  closeLightbox() {
+    this.setState({ isOpen: false });
+  }
+
+  moveNext() {
+    this.setState(prevState => ({
+      index: (prevState.index + 1) % this.images.length
+    }));
+  }
+
+  movePrev() {
+    this.setState(prevState => ({
+      index: (prevState.index + this.images.length - 1) % this.images.length
+    }));
+  }
+
+  render() {
+    let lightbox;
+    if (this.state.isOpen) {
+      lightbox = (
+        <Lightbox
+          mainSrc={this.images[this.state.index]}
+          nextSrc={this.images[(this.state.index + 1) % this.images.length]}
+          prevSrc={
+            this.images[
+              (this.state.index + this.images.length - 1) % this.images.length
+            ]
+          }
+          onCloseRequest={this.closeLightbox}
+          onMovePrevRequest={this.movePrev}
+          onMoveNextRequest={this.moveNext}
+          onImageLoadError={App.onImageLoadError}
+        />
+      );
     }
-    isOpen (index, event) {
-		event.preventDefault();
-		this.setState({
-			currentImage: index,
-            lightboxIsOpen: true,
-		});
-        // console.log(this.imgArr)
-    }
-    
-    onClose () {
-		this.setState({
-			currentImage: 0,
-			lightboxIsOpen: false,
-		});
-	}
-    
-    onClickPrev () {
-		this.setState({
-			currentImage: this.state.currentImage - 1,
-		});
-    }
-    
-	onClickNext () {
-		this.setState({
-			currentImage: this.state.currentImage + 1,
-		});
-	}
 
-    render(){
-        return(
-            <div style={{'display': 'flex', 'flexWrap': 'wrap', 'justifyContent': 'space-evenly'}}>
-            {
-                this.imgArr.map((img,i) => {
-                    return(
-                        <div class="image-container">
-                            <img key={i} class="myImage"  alt="placeholder" src={img} srcSet={img} onClick={(e) => this.isOpen(i, e)} style={{width: '200px', 'margin': '10px 0 10px 0'}}/>
-                        </div>
-                    )
-                })
-            }
-            <Lightbox
-
-        images={[{ src: 'https://picsum.photos/id/237/200/300' }, { src: 'https://picsum.photos/id/870/200/300?grayscale&blur=2' }]}
-                // images={[{ src: this.props.imgArr }]}
-                // currentImage={this.state.currentImage}
-                isOpen={this.state.lightboxIsOpen}
-                onClickPrev={this.gotoPrevLightboxImage}
-                onClickNext={this.gotoNextLightboxImage}
-                onClose={this.closeLightbox}
-            />
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly"
+        }}
+      >
+        {this.images.map((img, i) => {
+          return (
+            <div class="image-container">
+              <img
+                key={i}
+                class="myImage"
+                alt="placeholder"
+                src={img}
+                srcSet={img}
+                onClick={e => this.openLightbox(i)}
+                style={{ width: "200px", margin: "10px 0 10px 0" }}
+              />
             </div>
-        )
-    }
+          );
+        })}
+        {lightbox}
+      </div>
+    );
+  }
 }
-
-ImageGallery.propTypes = {
-	imgArr: PropTypes.array,
-};
 
 export default ImageGallery;
