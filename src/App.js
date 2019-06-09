@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-import Menu from "./Menu";
-import Footer from "./Footer";
+import { Menu } from "./components/header";
+import { Footer } from "./components/footer";
 import { MainArea } from "./pages/home";
 import { About } from "./pages/about";
 import { Service } from "./pages/service";

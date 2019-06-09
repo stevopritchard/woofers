@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
-import cityAndGuilds from "./assets/images/footer/city_and_guilds.png";
-import firstAid from "./assets/images/footer/dog_first_aid.JPG";
-import Map from "./Map";
+
+import cityAndGuilds from "../../assets/images/footer/city_and_guilds.png";
+import firstAid from "../../assets/images/footer/dog_first_aid.JPG";
+import { Map } from "../map";
+
 import "./Footer.css";
 
 class Footer extends Component {
