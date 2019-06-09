@@ -1,16 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import App from "./App";
-
+import React, { Component } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
-class ImageGallery extends React.Component {
+import App from "../../App";
+
+class ImageGrid extends Component {
   constructor(props) {
     super(props);
 
     this.images = [];
-    const context = require.context("./images-gallery", true, /\.(JPG)$/);
+    const context = require.context(
+      "../../assets/images/gallery",
+      true,
+      /\.(JPG)$/
+    );
     context.keys().forEach(filename => {
       this.images.push(context(filename));
     });
@@ -95,4 +98,4 @@ class ImageGallery extends React.Component {
   }
 }
 
-export default ImageGallery;
+export default ImageGrid;

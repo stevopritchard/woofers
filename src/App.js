@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
 import Menu from "./Menu";
-import MainArea from "./MainArea";
 import Footer from "./Footer";
-import About from "./About";
-import Service from "./Service";
-import Gallery from "./Gallery";
-import Terms from "./Terms";
-import Contact from "./Contact";
+import { MainArea } from "./pages/home";
+import { About } from "./pages/about";
+import { Service } from "./pages/service";
+import { Gallery } from "./pages/gallery";
+import { Contact } from "./pages/contact";
+import { Terms } from "./pages/terms";
+
 import "./App.css";
 
 class App extends Component {
