@@ -10,7 +10,7 @@ class About extends Component {
       <div className="container">
         <div id="contAbout">
           <Row>
-            <h2>About</h2>
+            <h2>About me...</h2>
           </Row>
           <Row>
             <Col className="col" xs="12" sm="12" md="12" lg="12">

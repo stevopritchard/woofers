@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Nav, Navbar, NavItem, Col } from "react-bootstrap";
+import { Nav, Navbar, NavItem } from "react-bootstrap";
 
-import woofers from "../../assets/images/header/wooferswording.jpg";
+import woofers from "../../assets/images/header/wooferswording.png";
 
 import "./Menu.css";
 
@@ -13,7 +13,7 @@ class Menu extends Component {
         <Navbar.Header>
           <Navbar.Brand>
             <NavLink to="/">
-              <div style={{ padding: 0, margin: -7 }}>
+              <div style={{ padding: 0, marginTop: -31 }}>
                 <img
                   alt="Woofers"
                   src={woofers}
@@ -28,21 +28,51 @@ class Menu extends Component {
               <p>Dog Grooming</p>
             </NavLink>
           </Navbar.Brand>
+
+          <Navbar.Toggle />
         </Navbar.Header>
-        <div>
-          <Col
-            className="col"
-            xs="12"
-            sm="12"
-            md="12"
-            lg="12"
-            style={{
-              display: "flex",
-              flexWrap: "nowrap",
-              justifyContent: "flex-end",
-              padding: "0"
-            }}
-          >
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <NavItem eventKey={1}>
+              <NavLink
+                activeStyle={{ textDecoration: "underline" }}
+                to="/about"
+              >
+                About
+              </NavLink>
+            </NavItem>
+            <NavItem eventKey={2}>
+              <NavLink
+                activeStyle={{ textDecoration: "underline" }}
+                to="/service"
+              >
+                Service
+              </NavLink>
+            </NavItem>
+            <NavItem eventKey={3}>
+              <NavLink
+                activeStyle={{ textDecoration: "underline" }}
+                to="/gallery"
+              >
+                Gallery
+              </NavLink>
+            </NavItem>
+            <NavItem eventKey={4}>
+              <NavLink
+                activeStyle={{ textDecoration: "underline" }}
+                to="/terms"
+              >
+                T&Cs
+              </NavLink>
+            </NavItem>
+            <NavItem eventKey={5}>
+              <NavLink
+                activeStyle={{ textDecoration: "underline" }}
+                to="/contact"
+              >
+                Contact
+              </NavLink>
+            </NavItem>
             <a href="tel:+447421479304">
               <i class="fa fa-phone" style={{ fontSize: "18px" }} />
             </a>
@@ -55,53 +85,8 @@ class Menu extends Component {
             <a href="https://www.instagram.com/woofersbristol/">
               <i class="fa fa-instagram" style={{ fontSize: "18px" }} />
             </a>
-          </Col>
-          <Navbar.Collapse>
-            <Nav pullRight>
-              <NavItem eventKey={1}>
-                <NavLink
-                  activeStyle={{ textDecoration: "underline" }}
-                  to="/about"
-                >
-                  About
-                </NavLink>
-              </NavItem>
-              <NavItem eventKey={2}>
-                <NavLink
-                  activeStyle={{ textDecoration: "underline" }}
-                  to="/service"
-                >
-                  Service
-                </NavLink>
-              </NavItem>
-              <NavItem eventKey={3}>
-                <NavLink
-                  activeStyle={{ textDecoration: "underline" }}
-                  to="/gallery"
-                >
-                  Gallery
-                </NavLink>
-              </NavItem>
-              <NavItem eventKey={4}>
-                <NavLink
-                  activeStyle={{ textDecoration: "underline" }}
-                  to="/terms"
-                >
-                  T&Cs
-                </NavLink>
-              </NavItem>
-              <NavItem eventKey={5}>
-                <NavLink
-                  activeStyle={{ textDecoration: "underline" }}
-                  to="/contact"
-                >
-                  Contact
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </Navbar.Collapse>
-          <Navbar.Toggle />
-        </div>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }

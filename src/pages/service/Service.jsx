@@ -9,7 +9,7 @@ class Service extends Component {
                 <div id="contService">
                     <Row>
                         <Col className="col preScrollable" xs="12" sm="12" md="12" lg="12">
-                            <p style={{fontWeight:"bolder"}}>A full groom at Woofers as standard includes:</p>
+                            <h3>A full groom at Woofers as standard includes:</h3>
                             <ul>
                                 <li>A deep shampoo tailored to your dogs coat (including sensitive medicated shampoo). <span role="img" aria-label="bathtub">&#x1F6C1;</span></li>
                                 <li>A blueberry facial cleanse to remove any tear stains.</li>
@@ -20,7 +20,7 @@ class Service extends Component {
                                 <li>A bow added for that finishing touch.</li>
                                 <li>Complimentary cuddles with all treatments. <span role="img" aria-label="paw prints">&#x1F43E;</span></li>
                             </ul>
-                            <table id="scrollingTable" class="table table-fixed" cellspacing="0">
+                            <table id="scrollingTable" class="table table-fixed" cellspacing="3">
                                 <thead>
                                     <tr>
                                         <th class="col-xs-6">Breed</th>
@@ -201,7 +201,7 @@ class Service extends Component {
                                     </tr>
                                     <tr>
                                         <td class="col-xs-6">Chow Chow</td>
-                                        <td class="col-xs-3">From £50</td>
+                                        <td class="col-xs-3">From £60</td>
                                         <td class="col-xs-3"></td>
                                     </tr>
                                     <tr>
@@ -556,7 +556,7 @@ class Service extends Component {
                                     </tr>
                                     <tr>
                                         <td class="col-xs-6">Shih Tsu</td>
-                                        <td class="col-xs-3">£40 – £45</td>
+                                        <td class="col-xs-3">£35 – £45</td>
                                         <td class="col-xs-3"></td>
                                     </tr>
                                     <tr>

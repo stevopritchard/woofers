@@ -12,8 +12,16 @@ class Footer extends Component {
     return (
       <div className="container">
         <div id="contFooter">
-          <Row style={{ width: "970px" }}>
-            <Col className="col" xs="4" sm="4" md="4" lg="4">
+          <Row>
+            <Col
+              className="col"
+              style={{
+                width: "220px",
+                fontFamily: "Chewy, cursive",
+                color: "#696969",
+                fontWeight: "200"
+              }}
+            >
               <h5 style={{ textAlign: "center" }}>Address</h5>
               <tr>
                 <td>38 Mill Lane</td>
@@ -37,20 +45,15 @@ class Footer extends Component {
                 parking available.{" "}
               </p>
             </Col>
-            <Col className="col" xs="4" sm="4" md="4" lg="4">
+            <Col className="col">
               <Map />
             </Col>
             <Col
               className="col"
-              xs="4"
-              sm="4"
-              md="4"
-              lg="4"
               style={{
                 display: "flex",
-                flexDirection: "row-reverse",
-                alignItems: "flex-end",
-                paddingTop: "30px"
+                flexFlow: "column wrap",
+                alignItems: "flex-end"
               }}
             >
               <img

@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Carousel, Row } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
-import image1 from "../../assets/images/carousel/carousel_1.JPG";
-import image2 from "../../assets/images/carousel/carousel_2.JPG";
-import image3 from "../../assets/images/carousel/carousel_3.JPG";
+import image1 from "../../assets/images/carousel/carousel_1.jpeg";
+import image2 from "../../assets/images/carousel/carousel_2.jpeg";
+import image3 from "../../assets/images/carousel/carousel_3.jpeg";
+import image4 from "../../assets/images/carousel/carousel_4.jpeg";
+import image5 from "../../assets/images/carousel/carousel_5.jpeg";
 
 class ControlledCarousel extends Component {
   constructor(props, context) {
@@ -22,6 +24,31 @@ class ControlledCarousel extends Component {
       index: selectedIndex,
       direction: e.direction
     });
+
+    console.log(this.state.index);
+    console.log(this.state.direction);
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(() => this.cycle(), 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  cycle() {
+    if (this.state.index < 4) {
+      this.setState({
+        index: this.state.index + 1,
+        direction: "next"
+      });
+    } else {
+      this.setState({
+        index: 0,
+        direction: "next"
+      });
+    }
   }
 
   render() {
@@ -43,12 +70,6 @@ class ControlledCarousel extends Component {
                 src={image1}
                 style={{ objectFit: "cover" }}
               />
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
             </div>
           </Carousel.Item>
           <Carousel.Item>
@@ -60,10 +81,6 @@ class ControlledCarousel extends Component {
                 src={image2}
                 style={{ objectFit: "cover" }}
               />
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
             </div>
           </Carousel.Item>
           <Carousel.Item>
@@ -75,20 +92,31 @@ class ControlledCarousel extends Component {
                 src={image3}
                 style={{ objectFit: "cover" }}
               />
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </Carousel.Caption>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div style={{ height: "500px" }}>
+              <img
+                width={900}
+                height={500}
+                alt="900x500"
+                src={image4}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div style={{ height: "500px" }}>
+              <img
+                width={900}
+                height={500}
+                alt="900x500"
+                src={image5}
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </Carousel.Item>
         </Carousel>
-
-        <Row
-          style={{ width: "970px", textAlign: "center", paddingTop: "11px" }}
-        />
       </div>
     );
   }

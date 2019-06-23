@@ -1,65 +1,73 @@
 .navbar {
-    position: fixed;
-    z-index: 1;
-    width: 100vw;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
 }
 
-.navbar .row {
-    display: flex;
-    flex-flow: column nowrap;
+.navbar,
+.navbar-nav,
+.navbar-header,
+.navbar-brand {
+  background-color: #efefef;
+  color: #75a8a6;
+  font-family: "Chewy", cursive;
 }
 
-.navbar, .navbar-nav, .navbar-header, .navbar-brand {
-   background-color: white;
-   color: #75a8a6;
-   font-family: 'Chewy', cursive;
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
 }
-
-.navbar .container{
-    display: flex;
-    justify-content: space-between;
+.navbar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.navbar-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.navbar-brand{
-    display: flex;
-    justify-content: left;
+.navbar-brand {
+  display: flex;
+  justify-content: left;
 }
 
 .navbar.navbar-default > .container > .navbar-header > a.navbar-brand {
-    color: #75a8a6;
+  color: #75a8a6;
 }
 
-.navbar.navbar-default > .container > .navbar-header > a.navbar-brand > p{
-    font-size: 1.2em;
+.navbar.navbar-default > .container > .navbar-header > a.navbar-brand > p {
+  font-size: 1.2em;
+}
+
+.navbar-nav > li > a {
+  padding: 15px 8px 10px 8px;
 }
 
 .navbar-right {
-    font-size: 1.2em;
-    transition: all 20s;
+  font-size: 1.2em;
+  transition: all 20s;
 }
 
-.navbar-right li a:link, a:hover, a:visited, a:active {
-    color: #75a8a6;
+.navbar-right li a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #75a8a6;
 }
 
-.navbar-right li{
-    transition: all .5s;
+.navbar-right li {
+  transition: all 0.5s;
 }
 
 .navbar-right li:hover {
-    transform: scale(1.15);
+  transform: scale(1.15);
 }
 
-.fa-facebook-square, .fa-instagram, .fa-at, .fa-phone {
-    color: #75a8a6;
-    padding: 0px 0px 0px 7px;
-    transition: all .5s;
+.fa-facebook-square,
+.fa-instagram,
+.fa-at,
+.fa-phone {
+  color: #75a8a6;
+  padding: 15px 0px 0px 7px;
+  transition: all 0.5s;
 }
 
 .fa:hover {
-        transform: scale(1.35);
+  transform: scale(1.35);
 }

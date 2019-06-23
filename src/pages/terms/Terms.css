@@ -1,39 +1,45 @@
-#contTerms{
-    display: flex;
-    background-color: #EFEFEF;
-    height: 600px;
-    overflow: scroll;
-    border-radius: 5px;
+#contTerms {
+  display: flex;
+  background-color: #efefef;
+  height: 600px;
+  overflow: scroll;
+  border-radius: 5px;
 }
 
-#contTerms p{
-    padding-top: 10px;
+#contTerms p {
+  padding-top: 10px;
 }
 
-#contTerms .row .col img{
-    width: 200px;
-    height: 110px;
+#contTerms .row .col img {
+  width: 200px;
+  height: 110px;
 }
 
-#contTerms .row{
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    padding: 0px 30px 30px 30px;
+#contTerms .row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0px 30px 30px 30px;
 }
 
-#contTerms .row .col{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 600px;
+#contTerms .row .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px;
 }
 
-#contTerms .row .col p{
-   font-size: 15px; 
+#contTerms .row .col h2,
+h3 {
+  font-family: "Chewy", cursive;
+  color: #75a8a6;
 }
 
-#contTerms .row .col ul li{
-    font-size: 15px;
- }
+#contTerms .row .col p {
+  font-size: 15px;
+}
+
+#contTerms .row .col ul li {
+  font-size: 15px;
+}
