@@ -1,0 +1,91 @@
+#contService {
+  display: flex;
+  background-color: #efefef;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+  /* overflow: scroll; */
+  border-radius: 5px;
+}
+
+#contService h3 {
+  font-family: "Chewy", cursive;
+  color: #75a8a6;
+}
+
+#contService th {
+  font-family: "Chewy", cursive;
+  color: #75a8a6;
+  font-weight: lighter;
+}
+
+#contService p {
+  padding-top: 10px;
+}
+
+#contService .row .col img {
+  width: 200px;
+  height: 110px;
+}
+
+#contService .row {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 30px 30px 30px;
+}
+
+#contService .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+}
+
+#contService .row .col p {
+  font-size: 15px;
+}
+
+#contService .row .col ul {
+  list-style-type: square;
+}
+
+#contService .row .col ul li {
+  font-size: 15px;
+}
+
+#scrollingTable {
+  width: 100%;
+  border-spacing: 5px;
+  border: 1px solid #75a8a6;
+  border-radius: 35px;
+}
+
+#scrollingTable thead {
+  display: table;
+  width: 100%;
+}
+
+#scrollingTable tbody {
+  overflow-y: scroll;
+  height: 200px;
+}
+
+#scrollingTable tr {
+  display: table;
+  width: 100%;
+}
+
+#scrollingTable thead,
+tbody,
+/* tr, */
+td,
+th {
+  display: block;
+}
+
+#scrollingTable td,
+th {
+  float: left;
+  padding: 5px;
+}
