@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { Row, Col, InputGroup, FormControl } from "react-bootstrap";
+import axios from "axios";
 import "./Contact.css";
 import FormErrors from "./FormErrors";
+
+const API_PATH = "http://localhost:3000/woofers/src/contact.php";
 
 class Contact extends Component {
   constructor(props) {
@@ -13,7 +16,9 @@ class Contact extends Component {
       message: "",
       formErrors: { name: "" },
       nameValid: false,
-      emailValid: false
+      emailValid: false,
+      mailSent: false,
+      error: null
     };
   }
 
@@ -59,14 +64,31 @@ class Contact extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({ name: "", email: "" });
 
-    const { name, email } = this.state;
+    const { name, email, phone, message } = this.state;
+
+    axios({
+      method: "post",
+      url: `${API_PATH}`,
+      headers: { "content-type": "application/json" },
+      data: this.state
+    })
+      .then(result => {
+        this.setState({
+          mailSent: result.data.sent
+        });
+      })
+      .catch(error => this.setState({ error: error.message }));
+
     document.getElementById("response").innerHTML =
       "Your message has been sent!";
     alert(`Your state values: \n 
             name: ${name} \n 
-            email: ${email}`);
+            email: ${email} \n
+            phone: ${phone} \n
+            message: ${message} \n`);
+
+    this.setState({ name: "", email: "", phone: "", message: "" });
   };
 
   render() {
@@ -79,7 +101,11 @@ class Contact extends Component {
           <Row>
             <Col className="col" xs="12" sm="12" md="12" lg="12">
               <div className="input-group center">
-                <form onSubmit={this.handleSubmit}>
+                <form
+                  onSubmit={this.handleSubmit}
+                  action="/contact.php"
+                  method="POST"
+                >
                   <InputGroup id="inputName" size="sm">
                     <FormControl
                       id="validationDefault01"
@@ -126,6 +152,7 @@ class Contact extends Component {
                       placeholder="Type your message here..."
                       aria-label="textarea"
                       value={this.state.message}
+                      onChange={event => this.handleUserInput(event)}
                     />
                   </InputGroup>
                 </form>
