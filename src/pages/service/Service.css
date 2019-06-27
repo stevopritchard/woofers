@@ -8,6 +8,16 @@
   border-radius: 5px;
 }
 
+#contService-sm {
+  display: flex;
+  background-color: #efefef;
+  justify-content: center;
+  height: 750px;
+  width: 100%;
+  /* overflow: scroll; */
+  border-radius: 5px;
+}
+
 #contService h3 {
   font-family: "Chewy", cursive;
   color: #75a8a6;
@@ -29,6 +39,12 @@
 }
 
 #contService .row {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 30px 30px 30px;
+}
+
+#contService-sm .row {
   display: flex;
   flex-direction: row;
   padding: 0px 30px 30px 30px;

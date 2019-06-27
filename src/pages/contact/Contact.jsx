@@ -6,12 +6,12 @@ import FormErrors from "./FormErrors";
 
 const API_PATH = "http://localhost:3000/woofers/src/contact.php";
 
-// register account on owners name and replace api key and api secret
-// mail jet allowed 6000 email per month with max 10 per hour.
-const mailJet = require("node-mailjet").connect(
-  "97b8e742c8afcdfcc39e7d40035e0aec", //api key
-  "ac784792379758544c2230980cf2db9b" //api secret
-);
+// // register account on owners name and replace api key and api secret
+// // mail jet allowed 6000 email per month with max 10 per hour.
+// const mailJet = require("node-mailjet").connect(
+//   "97b8e742c8afcdfcc39e7d40035e0aec", //api key
+//   "ac784792379758544c2230980cf2db9b" //api secret
+// );
 
 class Contact extends Component {
   constructor(props) {
@@ -72,52 +72,52 @@ class Contact extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    const { name, email, phone, message } = this.state;
+    // const { name, email, phone, message } = this.state;
 
-    axios({
-      method: "post",
-      url: `${API_PATH}`,
-      headers: { "content-type": "application/json" },
-      data: this.state
-    })
-      .then(result => {
-        this.setState({
-          mailSent: result.data.sent
-        });
-      })
-      .catch(error => this.setState({ error: error.message }));
+    // axios({
+    //   method: "post",
+    //   url: `${API_PATH}`,
+    //   headers: { "content-type": "application/json" },
+    //   data: this.state
+    // })
+    //   .then(result => {
+    //     this.setState({
+    //       mailSent: result.data.sent
+    //     });
+    //   })
+    //   .catch(error => this.setState({ error: error.message }));
 
-    const textPart = `Name: ${name},\nPhone: ${phone},\n\nMessage: ${message} `;
+    // const textPart = `Name: ${name},\nPhone: ${phone},\n\nMessage: ${message} `;
 
-    const request = mailJet.post("send", { version: "v3.1" }).request({
-      Messages: [
-        {
-          From: { Email: email, Name: name },
-          To: [{ Email: "shashankkushwah@gmail.com" }],
-          Subject: "Inquiry",
-          TextPart: textPart
-        }
-      ]
-    });
+    // const request = mailJet.post("send", { version: "v3.1" }).request({
+    //   Messages: [
+    //     {
+    //       From: { Email: email, Name: name },
+    //       To: [{ Email: "shashankkushwah@gmail.com" }],
+    //       Subject: "Inquiry",
+    //       TextPart: textPart
+    //     }
+    //   ]
+    // });
 
-    request
-      .then(result => {
-        // email sent
-        document.getElementById("response").innerHTML =
-          "Your message has been sent!";
-        alert(`Your state values: \n 
-          name: ${name} \n 
-          email: ${email} \n
-          phone: ${phone} \n
-          message: ${message} \n`);
-        this.setState({ name: "", email: "", phone: "", message: "" });
-      })
-      .catch(err => {
-        // error sending email
-        alert(`ERROR: \n 
-          ${err}`);
-        console.log(err.statusCode);
-      });
+    // request
+    //   .then(result => {
+    //     // email sent
+    //     document.getElementById("response").innerHTML =
+    //       "Your message has been sent!";
+    //     alert(`Your state values: \n
+    //       name: ${name} \n
+    //       email: ${email} \n
+    //       phone: ${phone} \n
+    //       message: ${message} \n`);
+    //     this.setState({ name: "", email: "", phone: "", message: "" });
+    //   })
+    //   .catch(err => {
+    //     // error sending email
+    //     alert(`ERROR: \n
+    //       ${err}`);
+    //     console.log(err.statusCode);
+    //   });
   };
 
   render() {
