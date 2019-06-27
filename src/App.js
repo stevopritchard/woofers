@@ -7,7 +7,6 @@ import { MainArea } from "./pages/home";
 import { About } from "./pages/about";
 import { Service } from "./pages/service";
 import { Gallery } from "./pages/gallery";
-import { Contact } from "./pages/contact";
 import { Terms } from "./pages/terms";
 
 import "./App.css";
@@ -22,7 +21,6 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/service" component={Service} />
           <Route path="/gallery" component={Gallery} />
-          <Route path="/contact" component={Contact} />
           <Route path="/terms" component={Terms} />
           <Footer />
         </div>

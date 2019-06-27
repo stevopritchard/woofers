@@ -15,7 +15,8 @@ class ControlledCarousel extends Component {
 
     this.state = {
       index: 0,
-      direction: null
+      direction: null,
+      width: window.innerWidth
     };
   }
 
@@ -33,9 +34,18 @@ class ControlledCarousel extends Component {
     this.timerID = setInterval(() => this.cycle(), 5000);
   }
 
+  componentWillMount() {
+    window.addEventListener("resize", this.handleWindowSizeChange);
+  }
+
   componentWillUnmount() {
+    window.removeEventListener("resize", this.handleWindowSizeChange);
     clearInterval(this.timerID);
   }
+
+  handleWindowSizeChange = () => {
+    this.setState({ width: window.innerWidth });
+  };
 
   cycle() {
     if (this.state.index < 4) {
@@ -62,10 +72,10 @@ class ControlledCarousel extends Component {
           onSelect={this.handleSelect}
         >
           <Carousel.Item>
-            <div style={{ height: "500px" }}>
+            <div>
               <img
-                width={900}
-                height={500}
+                width={"100%"}
+                height={"55%"}
                 alt="900x500"
                 src={image1}
                 style={{ objectFit: "cover" }}
@@ -73,10 +83,10 @@ class ControlledCarousel extends Component {
             </div>
           </Carousel.Item>
           <Carousel.Item>
-            <div style={{ height: "500px" }}>
+            <div>
               <img
-                width={900}
-                height={500}
+                width={"100%"}
+                height={"55%"}
                 alt="900x500"
                 src={image2}
                 style={{ objectFit: "cover" }}
@@ -84,10 +94,10 @@ class ControlledCarousel extends Component {
             </div>
           </Carousel.Item>
           <Carousel.Item>
-            <div style={{ height: "500px" }}>
+            <div>
               <img
-                width={900}
-                height={500}
+                width={"100%"}
+                height={"55%"}
                 alt="900x500"
                 src={image3}
                 style={{ objectFit: "cover" }}
@@ -95,10 +105,10 @@ class ControlledCarousel extends Component {
             </div>
           </Carousel.Item>
           <Carousel.Item>
-            <div style={{ height: "500px" }}>
+            <div>
               <img
-                width={900}
-                height={500}
+                width={"100%"}
+                height={"55%"}
                 alt="900x500"
                 src={image4}
                 style={{ objectFit: "cover" }}
@@ -106,10 +116,10 @@ class ControlledCarousel extends Component {
             </div>
           </Carousel.Item>
           <Carousel.Item>
-            <div style={{ height: "500px" }}>
+            <div>
               <img
-                width={900}
-                height={500}
+                width={"100%"}
+                height={"55%"}
                 alt="900x500"
                 src={image5}
                 style={{ objectFit: "cover" }}

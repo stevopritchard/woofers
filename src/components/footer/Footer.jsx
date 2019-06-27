@@ -59,7 +59,7 @@ class Footer extends Component {
               <img
                 alt="city&guilds"
                 src={cityAndGuilds}
-                style={{ height: "65px" }}
+                style={{ height: "65px", paddingTop: "20px" }}
               />
               <img alt="firstaid" src={firstAid} style={{ height: "65px" }} />
             </Col>
