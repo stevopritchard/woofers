@@ -70,6 +70,7 @@ class ControlledCarousel extends Component {
           activeIndex={index}
           direction={direction}
           onSelect={this.handleSelect}
+          style={{ zIndex: "0" }}
         >
           <Carousel.Item>
             <div>

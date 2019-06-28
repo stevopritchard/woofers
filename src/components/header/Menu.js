@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Nav, Navbar, NavItem, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, NavItem } from "react-bootstrap";
 
 import woofers from "../../assets/images/header/wooferswording.png";
 
@@ -34,7 +34,11 @@ class Menu extends Component {
 
     if (isMobile) {
       return (
-        <Navbar collapseOnSelect fixed="top">
+        <Navbar
+          collapseOnSelect
+          fixed="top"
+          // style={{ display: "flex", flexFlow: "column nowrap" }}
+        >
           <Navbar.Header>
             <Navbar.Brand>
               <NavLink to="/">
@@ -50,13 +54,12 @@ class Menu extends Component {
                     }}
                   />
                 </div>
-                <p>Dog Grooming</p>
               </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav pullRight>
+          <Navbar.Collapse className="collapse navbar-collapse navHeaderCollapse">
+            <Nav>
               <NavItem eventKey={1}>
                 <NavLink
                   activeStyle={{ textDecoration: "underline" }}
@@ -89,18 +92,27 @@ class Menu extends Component {
                   T&Cs
                 </NavLink>
               </NavItem>
-              <a href="tel:+447421479304">
-                <i class="fa fa-phone" style={{ fontSize: "18px" }} />
-              </a>
-              <a href="mailto:noreply@woofersbristol.co.uk">
-                <i class="fa fa-at" style={{ fontSize: "18px" }} />
-              </a>
-              <a href="https://www.facebook.com/WoofersBristol/">
-                <i class="fa fa-facebook-square" style={{ fontSize: "18px" }} />
-              </a>
-              <a href="https://www.instagram.com/woofersbristol/">
-                <i class="fa fa-instagram" style={{ fontSize: "18px" }} />
-              </a>
+              <div>
+                <a href="tel:+447421479304">
+                  <i class="fa fa-phone" style={{ fontSize: "18px" }} />
+                </a>
+
+                <a href="https://www.facebook.com/WoofersBristol/">
+                  <i
+                    class="fa fa-facebook-square"
+                    style={{ fontSize: "18px" }}
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="mailto:noreply@woofersbristol.co.uk">
+                  <i class="fa fa-at" style={{ fontSize: "18px" }} />
+                </a>
+
+                <a href="https://www.instagram.com/woofersbristol/">
+                  <i class="fa fa-instagram" style={{ fontSize: "18px" }} />
+                </a>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -162,6 +174,7 @@ class Menu extends Component {
                   T&Cs
                 </NavLink>
               </NavItem>
+
               <a href="tel:+447421479304">
                 <i class="fa fa-phone" style={{ fontSize: "18px" }} />
               </a>
