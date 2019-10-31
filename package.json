@@ -10,7 +10,7 @@
     "google-maps-react": "^2.0.2",
     "instafeed.js": "^1.4.1",
     "install": "^0.12.2",
-    "jquery": "^1.9.1",
+    "jquery": "^3.4.0",
     "node-mailjet": "^3.3.1",
     "popper.js": "^1.15.0",
     "react": "^16.7.0",
